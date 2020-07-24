@@ -1,0 +1,407 @@
+html,body{
+	width: 100%;
+}
+body,ul,p,h3{
+	margin: 0;
+	padding: 0;
+}
+body{
+	
+}
+ul{
+	list-style: none;
+}
+.pos-absolute{
+	position: absolute;
+}
+.pos-relative{
+	position: relative;
+}
+/*清楚浮动*/
+.clearfix:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+/*背景样式开始*/
+.home{
+	width: 100%;
+	font-size: 0;
+	background:url(../images/bg.jpg) no-repeat center/cover; 
+}
+/*背景样式结束*/
+/*顶部样式*/
+.header{
+	padding: 25px 30px 771px;
+	/*background-color: skyblue;*/
+}
+/*阴阳师图标设置*/
+.header .left{
+	float:left; 
+	width: 75px;
+	height: 198px;
+	background:url(../images/yys.png) no-repeat;
+}
+/*进入官网图标设置*/
+.header .right{
+	float:right; 
+	width: 155px;
+	height: 46px;
+	background:url(../images/gw_20acea7.png) no-repeat;
+}
+.header .right:hover{
+	opacity: 0.6;
+}
+/*顶部样式结束*/
+/*中部设置*/
+/*新版情报设置*/
+.content{
+	width: 1250px;
+	margin:auto;
+}
+.content .new{
+	padding-top: 55px;
+	width:1050px;
+	margin: auto;
+	background: url(../images/tit01_4f8b887.png) no-repeat top center;
+}
+.content .new ul li{
+	float: left;
+	width: 350px;
+	height: 450px; 
+	text-align: left;
+	transition-duration: 0.4s;
+}
+.content .new ul li a{
+	text-decoration: none;
+}
+.content .new ul li:nth-child(2) a{
+	top: 49px;
+	left: 40px;
+}
+.content .new ul li:nth-child(3) a{
+	top: 7px;
+	left: 84px;
+}
+.content .new ul li:nth-child(4) a{
+	top: 32px;
+	left: -67px;
+}
+.content .new ul li:nth-child(5) a{
+	top: -32px;
+	left: 41px;
+}
+.content .new ul li:nth-child(6) a{
+	top: -7px;
+	left: 83px;
+}
+/*触发效果*/
+.content .new li:hover{
+	transform: translateY(-15px);
+}
+/*新版情报设置结束*/
+/*游戏特色设置*/
+.content .specail{
+	padding-top: 110px;
+	margin-top: 30px;
+	text-align: center;
+	background: url(../images/tit02_f4c22b7.png) no-repeat center top;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+.content .specail .run{
+	width: 811px;
+	height: 608px;
+	margin:auto;
+	transform-style: preserve-3d;
+}
+.content .specail .run li{
+	width: 100%;
+	height: 100%;
+	border: 3px solid #cbc08e;
+	left: 0;
+	right: 0;
+	margin: auto;
+	filter: brightness(0.3);
+}
+.content .specail .run li:nth-child(1){
+	animation: run-1 12s infinite;
+	filter: brightness(1);
+}
+.content .specail .run li:nth-child(2){
+	left: 180px;
+	top:26px;
+	transform:translateZ(-130px) rotateY(-3deg);
+	animation: run-2 12s infinite;
+}
+.content .specail .run li:nth-child(3){
+	left: -350px;
+	top:26px;
+	transform:translateZ(-130px) rotateY(3deg);
+	animation: run-3 12s infinite;
+}
+.content .specail .run li:nth-child(4){
+	left: 0;
+	top:26px;
+	transform:translateZ(-150px);
+	animation: run-4 12s infinite;
+}
+@keyframes run-1{
+	25%{
+		transform:translateZ(-130px) translateX(-180px) translateY(26px) rotateY(3deg);
+		filter: brightness(0.3);
+	}
+	50%{
+		transform:translateZ(-150px) translateY(26px);
+		filter: brightness(0.3);
+	}
+	75%{
+		transform:translateZ(-130px) translateX(180px) translateY(26px) rotateY(-3deg);
+		filter: brightness(0.3);
+	}
+}
+@keyframes run-2{
+	25%{
+		transform:translateZ(0px) translateX(-180px);
+		filter: brightness(1);
+	}
+	50%{
+		transform:translateZ(-130px) translateX(-360px) rotateY(3deg);
+	}
+	75%{
+		transform:translateZ(-150px) translateX(-180px);
+	}
+}
+@keyframes run-3{
+	25%{
+		transform:translateZ(-150px) translateX(180px);
+	}
+	50%{
+		transform:translateZ(-130px) translateX(360px) rotateY(3deg);
+		filter: brightness(0.3);
+	}
+	75%{
+		transform:translateZ(0px) translateX(180px);
+		filter: brightness(1);
+	}
+}
+@keyframes run-4{
+	25%{
+		transform:translateZ(-130px) translateX(180px) rotateY(-3deg);
+		filter: brightness(0.3);
+	}
+	50%{
+		transform:translateZ(0px) translateX(0px) ;
+		filter: brightness(1);
+	}
+	75%{
+		transform:translateZ(-130px) translateX(-180px) rotateY(3deg);
+	}
+}
+.content .specail .left,
+.content .specail .right{
+	width: 43px;
+	height: 77px;
+	top: 50%;
+}
+/*左箭头*/
+.content .specail .left{
+	background: url(../images/prev_5119dcd.png) no-repeat;
+	left: 0;
+}
+/*右箭头*/
+.content .specail .right{
+	background: url(../images/next_ed58e31.png) no-repeat;
+	right:0;
+}
+.content .specail .left:hover,
+.content .specail .right:hover{
+	cursor: pointer;
+	opacity: 0.7;
+}
+/*游戏特色设置结束*/
+/*中部设置结束*/
+/*底部设置*/
+.foot{
+	width: 850px;
+	margin: 110px auto 0;
+	font-size: 14px;
+	text-align: center;
+}
+.foot .share ul,
+.foot .share li{
+	display: inline-block;
+}
+.foot .share li{
+	margin: 0 10px;
+
+}
+.foot .share,
+.foot .share li a{
+	display: block;
+	color: #efcb97;
+}
+.foot a{
+	text-decoration: none;
+}
+.foot .share li a{
+	line-height: 24px;
+}
+.foot .share li a span{
+	font-size:22px;
+	vertical-align: middle;
+}
+.foot .share li a:hover{
+	color: red;
+}
+.foot .last{
+	margin-top: 20px;
+}
+.foot .last .left,
+.foot .last .right{
+	display: inline-block;
+	vertical-align: middle;
+}
+.foot .last .left{
+	font-size:0;
+	margin-right: 15px;
+}
+
+.foot .last .left li{
+	display: inline-block;
+	vertical-align: middle;
+}
+.foot .last .left li a{
+	display: block;
+}
+.foot .last .left li:nth-child(1) a{
+	width: 118px;
+	height: 31px;
+	background: url(../images/netease.2.png) no-repeat;
+}
+.foot .last .left li:nth-child(2) a{
+	width: 134px;
+	height: 31px;
+	background: url(../images/nie.2.png) no-repeat;
+}
+.foot .last .left li:nth-child(3) a{
+	width: 31px;
+	height: 31px;
+	margin-left: 15px;
+	background: url(../images/wen.png) no-repeat;
+}
+.foot .last .left li:nth-child(4) a{
+	width: 31px;
+	height: 31px;
+	margin-left: 15px;
+	background: url(../images/wen2.png) no-repeat;
+}
+.foot .last .right{
+	width: 487px;
+}
+.foot .last .right li{
+	float: left;
+	margin-right:5px;
+}
+.foot .last .right li a{
+	display: block;
+}
+.foot .last .right li a,
+.foot .last .right li{
+	font-size: 12px;
+	color: white;
+	line-height: 25px;
+}
+.foot .last .right li:last-child{
+	float: right;
+	background-color: #610000;
+}
+.foot .last .right li a:hover{
+	text-decoration:underline;
+}
+.foot .font{
+	margin-top: 20px;
+	font-size: 12px;
+	color: white;
+	text-align: left;
+	line-height: 26px;
+}
+.foot .font a{
+	color: white;
+}
+.foot .font a:hover{
+	text-decoration: underline;
+}
+/*底部设置结束*/
+/*边部开始*/
+.load{
+	display: hidden;
+	width: 203px;
+	height: 461px;
+	background: url(../images/dl_bg_44fc686.png) no-repeat;
+	position: fixed;
+	right: 0;
+	top:50%;
+	transform: translate(158px,-50%);
+	font-size:20px;
+	transition:0.2s linear;
+}
+.collect{
+	opacity: 1;
+	z-index:2;
+}
+.collect:hover{
+	opacity: 0;
+}
+.collect:hover+.open,
+.open:hover{
+	transform: translateY(-50%);
+	z-index:3;
+}
+.load a i{
+	display: block;
+	width: 21px;
+	height: 21px;
+	margin-left: 10px;
+}
+.collect a i{
+	transform:rotate(180deg);
+}
+.load a{
+	display: inline-block;
+	width: 39px;
+	padding:20px 10px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+.load ul{
+	float: right;
+}
+.load ul li{
+	width: 137px;
+	height: 137px;
+	margin: 7px 4px 0 0;
+}
+.load ul li:nth-child(1){
+	background: url(../images/qr.png) no-repeat left/128px 128px;
+}
+.load ul li:nth-child(2){
+	background: url(../images/btn-pc_82fe993.png) no-repeat left/137px 137px;
+}
+.load ul li:nth-child(3){
+	height: 167px;
+	background: url(../images/btn_wyds_658a871.png) no-repeat left/137px 167px;
+}
+.load ul li img{
+	animation:move 2s infinite alternate linear ;
+}
+@keyframes move{
+	0%{
+		transform: translateY(-8px);
+	}
+	100%{
+		transform: translateY(117px);
+	}
+}
+/*边部结束*/
